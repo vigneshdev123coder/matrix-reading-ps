@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //WAP to print  the sum of outer layers in the matrix
+let a=[[2,3,4],[3,4,2],[3,4,1]];
+let sum=0;
+for(let i=0;i<a.length;i++){
+      str="";
+    if(i==0||i==a.length-1){
+      
+        for(let j=0;j<a[i].length;j++){
+            sum+=a[i][j];
+            str+=String(a[i][j])+" ";
+        }
+        console.log(str);
+    }
+        else{
+            sum+=a[i][0]+a[i][a[i].length-1];
+           str= String(a[i][0])+" "+String(a[i][a[i].length-1]);
+            console.log(str);
+        }
+         
+}
+console.log(sum);
+// 2) WAP to print the sum of diagonal elements in the matrix
+
+ a=[[2,3,4,6],
+       [3,4,2,8],
+       [3,4,1,7],
+       [5,8,6,9]];
+ sum=0;
+let lef=0;let rig=a.length-1;
+  for(let i=0;i<a.length;i++){
+      if(lef!=rig)
+      sum+=a[i][lef]+a[i][rig];
+      else sum+=a[i][lef];
+      
+      lef++;rig--;
+  }
+
+console.log(sum);
+    </script>
+    
+</body>
+</html>
